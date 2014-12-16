@@ -1,1 +1,54 @@
-﻿Resize the browser window. When the width of this document is less than 300 pixels, the background-color is "lightblue", otherwise it is "lightgreen".
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightgreen;
+}
+div.container {
+	position: relative;
+}
+div.inner1 {
+	background-color: red;
+	width: 400px;
+	height: 400px;
+	float: left;
+}
+div.inner2 {
+	background-color: blue;
+	width: 600px;
+	height: 50px;
+	float: left;
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        background-color: lightblue;
+    }
+	div.container {
+		position: relative;
+	}
+	div.inner1 {
+		position: absolute;
+	}
+	div.inner2 {
+		position: absolute;
+	}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<p>Resize the browser window. When the width of this document is less than 300 pixels, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+<div id="picture" class="inner1">id picture, class inner1</div>
+<div id="header" class="inner2">id header, class inner2</div>
+
+</div> <!-- End div.container -->
+
+
+</body>
+</html>
+

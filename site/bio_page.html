@@ -1,27 +1,139 @@
-﻿Hello, World!
+<!DOCTYPE html>
+<html>
 
+<head>
+	<meta charset = "utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name = "viewport" content = "width=device-width, initial-scale=1" />
+	<title>Biography of Guest House Founder</title>
+	
+	<!-- Bootstrap -->
+	<!--
+	<link href = "../bootstrap-3.2.0-dist/css/bootstrap.min.css" rel = "stylesheet" />
+	-->
+	<link href = "bootstrap.min.css" rel = "stylesheet" />
+	<link href = "../css/styles.css" rel = "stylesheet" />
+	
+	<!-- This is for class textColumns, to make text more readable depending on screen width -->
+	<style>
+	
+		#pic {
+			width: 100%
+			/*height: 100%*/
+			/*width:200px;
+			height:200px;*/
+			/*display: block;
+			margin-left: auto;
+			margin-right: auto*/
+			/*margin: 0 auto;*/
+		}
+	
+		/* If the screen is most narrow, text is only one column */
+		@media screen and (min-width: 500px) {
+			.textColumns { -webkit-columns:2;
+				-moz-columns:2;
+				columns:2; 
+			}
+		}
+		
+		/* If the screen is most wide, text is three columns */
+		@media screen and (min-width: 800px) {
+			.textColumns { -webkit-columns:3;
+				-moz-columns:3;
+				columns:3; }
+		}
+		
+	</style>
+	
+</head>
 
+<body>
 
+<h1>Hello, World!</h1>
+	
+<div class="container">
+		
+	<!-- use the following bootstrap columns text flow: -->
+	<div id="about_me_text" class="row">
+		<div class="col-lg-6 col-sm-6" style="background-color:orange">
+			
+			<div id="about_me_pic" style="float:left;  background-color:black; width:200px">
+				Self Portrait Floated left: text should flow around this
+			</div>
+			
+			<div id="about_me_header1" style="float:left;">
+				About Me Header
+			</div>
+			
+			About Me One
+			
+			
+		</div>
+		
+		<div class="col-lg-6 col-sm-6" style="background-color:magenta">
+			About Me Two
+		</div>
+	</div> <!-- End div id about_me_text -->
+	
+	
+	
+	<br />
+	<br />
+	<!--SECOND APPROACH -->
+	<p>SECOND APPROACH</p>
+	
+	<div id="about_me" class="row">
+	
+	<div id="about_me_header">
+		<p>About Me Header</p>
+	</div>
+	
+	<div class="textColumns" style="lightpurple">
+	
+	<div id="pic" style="float:left;  background-color:grey;">
+		Self Portrait Floated left: text should flow around this
+	</div>
+	
+	<!-- Flows too narrow around the picture -->
+	<div id="about_me_text" style="float:left;">	
+		flow elements inside this div: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus libero eu sollicitudin laoreet. Morbi condimentum sapien non nunc faucibus, nec dictum elit consectetur. Sed dictum tristique turpis, at pulvinar odio tempor ut. Nullam ornare ex sed iaculis varius. Donec magna arcu, aliquam non est id, dignissim posuere purus. Aenean lacinia lobortis sem, bibendum lobortis ex blandit sit amet. Integer tempor nec est vitae egestas. Proin tristique aliquet bibendum. Cras in lacinia neque. Nulla volutpat a ipsum sit amet fringilla.
 
+		Morbi imperdiet ornare ex, non hendrerit est commodo facilisis. In nec sapien feugiat, finibus ligula quis, faucibus justo. Proin lacus ante, faucibus eget nisi nec, sollicitudin fringilla ligula. Pellentesque tincidunt leo vitae nisl luctus, id porttitor risus suscipit. Ut et consequat ex, quis eleifend arcu. Nam ut arcu eget turpis gravida pulvinar. Vestibulum luctus ullamcorper pellentesque. Nullam id enim sapien. Donec non odio nec ex cursus facilisis. Quisque euismod odio in erat molestie, sed condimentum ligula fermentum. Maecenas malesuada nisl nec ultricies lobortis. Fusce consequat elit sed tellus suscipit, ac posuere odio volutpat. Sed pulvinar mauris nunc. Sed in purus urna. Ut libero ligula, molestie et bibendum a, malesuada vitae nulla.
 
+		Fusce vel tortor nec odio euismod lobortis. Fusce suscipit venenatis justo, non rutrum sapien feugiat ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse posuere tincidunt neque, vel tincidunt arcu tempor quis. Vivamus maximus lacus ac elit pulvinar, scelerisque aliquam magna convallis. Cras eget turpis sed lorem imperdiet pulvinar. Mauris a tristique nulla. Nam pretium ante ut nunc pulvinar, ac consectetur libero ullamcorper. In at nulla nulla. Suspendisse eu nulla lacus. Quisque nisi sem, dignissim vitae erat ac, lobortis posuere tellus. Donec in felis massa. Phasellus ut mi sem. Morbi magna diam, viverra sed urna a, pulvinar imperdiet ipsum. Maecenas rhoncus nulla eu mi euismod dapibus. Vivamus lobortis tortor purus.
 
-Self Portrait Floated left: text should flow around this
-About Me Header
-About Me One
-About Me Two
+		Aliquam et augue in nulla feugiat vulputate. Morbi tempus dapibus lectus vitae lobortis. Mauris vitae rhoncus ligula, quis auctor dui. Vivamus bibendum non mi quis vehicula. Nullam feugiat mauris ut lacus gravida, non luctus lacus gravida. Integer et sapien vitae sapien feugiat egestas. Vivamus interdum suscipit dui, et commodo nunc condimentum quis. In tincidunt mattis libero, in dignissim ipsum volutpat quis. Pellentesque scelerisque, tellus vitae fringilla semper, nisi ante elementum massa, sit amet pulvinar dolor sem et erat.
 
+		Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin molestie tempor odio, ac commodo libero tempus nec. Etiam dapibus interdum lorem, ut hendrerit est hendrerit ac. Aenean in mi id eros tincidunt venenatis. Duis lobortis a massa ut cursus. Aliquam sed tellus dui. Suspendisse ultrices facilisis euismod. Pellentesque mollis ipsum mi, lacinia mattis libero tempor non. Integer maximus, ligula sed porttitor fringilla, tortor tellus vestibulum arcu, eu rutrum leo nunc a sem. Integer fringilla massa quis sem dapibus rhoncus. Sed ullamcorper porttitor augue, quis tincidunt velit ornare sed. Donec euismod, leo vel vulputate vestibulum, mi nibh sollicitudin erat, vel gravida sapien metus in nisl. Pellentesque in volutpat arcu, nec consequat diam. Integer sit amet turpis sit amet mauris volutpat lobortis. Cras blandit varius leo, a aliquet ipsum lobortis at.
+	</div> <!-- End div id about_me_text -->
+	
+	</div> <!-- End div class text_columns -->
+	
+	</div> <!-- End div id about_me -->
+</div> <!-- End div class container -->
+	
+	<script src = "../javascript/jquery-1.8.3.min.js"></script>
+	<script src = "../bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 
+	
+	<script>
+	
+	$(document).ready(function() {
+	
+	function setPicHeight() {
+		var width = $( '#pic' ).css( "width" );
+		var height = width;
+		$( '#pic' ).css({ 
+			'height': height
+		});
+	}
 
+	$(window).on('resize', function() { setPicHeight(); });
+	setPicHeight();
 
+	}); //end $(document).ready....
+	
+	</script>
+</body>
 
-
-
-
-SECOND APPROACH
-
-
-About Me Header
-
-
-Self Portrait Floated left: text should flow around this
-flow elements inside this div: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus libero eu sollicitudin laoreet. Morbi condimentum sapien non nunc faucibus, nec dictum elit consectetur. Sed dictum tristique turpis, at pulvinar odio tempor ut. Nullam ornare ex sed iaculis varius. Donec magna arcu, aliquam non est id, dignissim posuere purus. Aenean lacinia lobortis sem, bibendum lobortis ex blandit sit amet. Integer tempor nec est vitae egestas. Proin tristique aliquet bibendum. Cras in lacinia neque. Nulla volutpat a ipsum sit amet fringilla. Morbi imperdiet ornare ex, non hendrerit est commodo facilisis. In nec sapien feugiat, finibus ligula quis, faucibus justo. Proin lacus ante, faucibus eget nisi nec, sollicitudin fringilla ligula. Pellentesque tincidunt leo vitae nisl luctus, id porttitor risus suscipit. Ut et consequat ex, quis eleifend arcu. Nam ut arcu eget turpis gravida pulvinar. Vestibulum luctus ullamcorper pellentesque. Nullam id enim sapien. Donec non odio nec ex cursus facilisis. Quisque euismod odio in erat molestie, sed condimentum ligula fermentum. Maecenas malesuada nisl nec ultricies lobortis. Fusce consequat elit sed tellus suscipit, ac posuere odio volutpat. Sed pulvinar mauris nunc. Sed in purus urna. Ut libero ligula, molestie et bibendum a, malesuada vitae nulla. Fusce vel tortor nec odio euismod lobortis. Fusce suscipit venenatis justo, non rutrum sapien feugiat ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse posuere tincidunt neque, vel tincidunt arcu tempor quis. Vivamus maximus lacus ac elit pulvinar, scelerisque aliquam magna convallis. Cras eget turpis sed lorem imperdiet pulvinar. Mauris a tristique nulla. Nam pretium ante ut nunc pulvinar, ac consectetur libero ullamcorper. In at nulla nulla. Suspendisse eu nulla lacus. Quisque nisi sem, dignissim vitae erat ac, lobortis posuere tellus. Donec in felis massa. Phasellus ut mi sem. Morbi magna diam, viverra sed urna a, pulvinar imperdiet ipsum. Maecenas rhoncus nulla eu mi euismod dapibus. Vivamus lobortis tortor purus. Aliquam et augue in nulla feugiat vulputate. Morbi tempus dapibus lectus vitae lobortis. Mauris vitae rhoncus ligula, quis auctor dui. Vivamus bibendum non mi quis vehicula. Nullam feugiat mauris ut lacus gravida, non luctus lacus gravida. Integer et sapien vitae sapien feugiat egestas. Vivamus interdum suscipit dui, et commodo nunc condimentum quis. In tincidunt mattis libero, in dignissim ipsum volutpat quis. Pellentesque scelerisque, tellus vitae fringilla semper, nisi ante elementum massa, sit amet pulvinar dolor sem et erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin molestie tempor odio, ac commodo libero tempus nec. Etiam dapibus interdum lorem, ut hendrerit est hendrerit ac. Aenean in mi id eros tincidunt venenatis. Duis lobortis a massa ut cursus. Aliquam sed tellus dui. Suspendisse ultrices facilisis euismod. Pellentesque mollis ipsum mi, lacinia mattis libero tempor non. Integer maximus, ligula sed porttitor fringilla, tortor tellus vestibulum arcu, eu rutrum leo nunc a sem. Integer fringilla massa quis sem dapibus rhoncus. Sed ullamcorper porttitor augue, quis tincidunt velit ornare sed. Donec euismod, leo vel vulputate vestibulum, mi nibh sollicitudin erat, vel gravida sapien metus in nisl. Pellentesque in volutpat arcu, nec consequat diam. Integer sit amet turpis sit amet mauris volutpat lobortis. Cras blandit varius leo, a aliquet ipsum lobortis at.
+</html>
