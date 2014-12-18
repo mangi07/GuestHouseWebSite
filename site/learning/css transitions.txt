@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    opacity: 0.7;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari 3.1 to 6.0 */
+}
+
+div:hover {
+    opacity: 0.2;
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+<p>Hover over the div element above, to see the transition effect.</p>
+
+</body>
+</html>
+http://www.w3schools.com/cssref/css3_pr_opacity.asp

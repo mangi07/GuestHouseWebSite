@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ADD THE BANNER AND HEADER NAVBAR -->
+<!-- ADD STYLING CSS -->
+<!-- ADD PHOTOGALLERY -->
+
+<head>
+	<meta charset = "utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name = "viewport" content = "width=device-width, initial-scale=1" />
+	<title>Biography of Guest House Founder</title>
+	
+	<!-- Bootstrap -->
+	<!--
+	<link href = "../bootstrap-3.2.0-dist/css/bootstrap.min.css" rel = "stylesheet" />
+	-->
+	<link href = "bootstrap.min.css" rel = "stylesheet" />
+	<link href = "../css/styles.css" rel = "stylesheet" />
+	
+	<!-- This is for class textColumns, to make text more readable depending on screen width -->
+	<style>
+	
+		#pic {
+			width: 100%
+			
+			/*height: 100%*/
+			/*width:200px;
+			height:200px;*/
+			/*display: block;
+			margin-left: auto;
+			margin-right: auto*/
+			/*margin: 0 auto;*/
+		}
+	
+		/* If the screen is most narrow, text is only one column */
+		@media screen and (min-width: 500px) {
+			.textColumns { -webkit-columns:2;
+				-moz-columns:2;
+				columns:2; 
+			}
+		}
+		
+		/* If the screen is most wide, text is three columns */
+		@media screen and (min-width: 800px) {
+			.textColumns { -webkit-columns:3;
+				-moz-columns:3;
+				columns:3; }
+		}
+		
+	</style>
+
+	<style type="text/css">
+		.active{
+			z-index:99;
+		}
+	</style>
+
+	
+</head>
+
+
+<body>
+
+
+<div id="slideshow">
+    <img src="pics/Chrysanthemum.jpg" style="position:absolute;" class="active" id="first"/>
+    <img src="pics/Desert.jpg" style="position:absolute;" />
+    <img src="pics/Hydrangeas.jpg" style="position:absolute;" />
+	<img src="pics/Jellyfish.jpg" style="position:absolute;" />
+</div>
+
+<script src = "../../javascript/jquery-1.8.3.min.js"></script>
+<!-- jquery needed for the following script... -->
+
+<script>
+	var count = 1;
+	var max = 4;
+	
+	function slideSwitch() {
+		var $active = $('div#slideshow IMG.active');
+		var $next;
+		
+		if (count >= max) {
+			count = 1;
+			$next = $( 'div#slideshow #first' );
+			console.log("if");
+		} else {
+			$next = $active.next();
+		}
+		$next.addClass('active');
+        $active.removeClass('active');
+		
+		count++;
+		
+    }
+
+    $(function() {
+        setInterval( "slideSwitch()", 1000 );
+    });
+</script>
+
+
+</body>
