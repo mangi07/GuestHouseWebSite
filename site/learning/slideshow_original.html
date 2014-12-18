@@ -52,7 +52,16 @@
 
 	<style type="text/css">
 		.active{
+			z-index:98;
+		}
+		.fadeout{
 			z-index:99;
+			opacity: 0.0;
+			//width: 100px;
+			//height: 100px;
+			//background: red;
+			transition: opacity 2s;
+			-webkit-transition: opacity 2s; /* Safari 3.1 to 6.0 */
 		}
 	</style>
 
@@ -74,7 +83,7 @@
 <!-- jquery needed for the following script... -->
 
 <script>
-	var count = 1;
+	var count = 0;
 	var max = 4;
 	
 	function slideSwitch() {
@@ -82,21 +91,23 @@
 		var $next;
 		
 		if (count >= max) {
-			count = 1;
+			count = 0;
+			$('div#slideshow img').removeClass('fadeout');	// fade
 			$next = $( 'div#slideshow #first' );
 			console.log("if");
 		} else {
 			$next = $active.next();
 		}
+		$active.addClass('fadeout');	// fade
 		$next.addClass('active');
-        $active.removeClass('active');
+		$active.removeClass('active');
 		
 		count++;
 		
     }
 
     $(function() {
-        setInterval( "slideSwitch()", 1000 );
+        setInterval( "slideSwitch()", 3000 );
     });
 </script>
 
